@@ -1,6 +1,7 @@
 import {Course} from '../../types/course';
 import {Table, Typography, Space} from 'antd';
 import DayTag from './DayTag';
+import DownloadButton from './DownloadButton';
 
 const {Paragraph} = Typography;
 
@@ -93,6 +94,15 @@ export default function CourseTable({courses, ...rest}) {
       dataIndex: 'semester',
       key: 'semester',
       render: renderSemester
+    },
+    {
+      title: 'Action',
+      key: 'action',
+      render: (text, record) => {
+        return (
+          <DownloadButton course={record} />
+        );
+      }
     }
   ];
 

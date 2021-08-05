@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -11,9 +12,13 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "antd": "^4.16.10",
+    "ics": "^2.31.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "rrule": "^2.6.8",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
@@ -40,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/moment": "^2.13.0",
+    "@types/moment-timezone": "^0.5.30"
   }
 }
