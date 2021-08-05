@@ -9,40 +9,40 @@ const endpoint = 'https://secure.swarthmore.edu/trico-course-guide/courses.json'
 
 export default function App() {
 
-  // Keep track of the selected rows.
-  const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
+    // Keep track of the selected rows.
+    const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
 
-  const {courses, error, fetching} = useCourses(endpoint);
+    const {courses, error, fetching} = useCourses(endpoint);
 
-  const handleSearch = (searchValue) => {
+    const handleSearch = (searchValue) => {
     // If the search value is empty, reset the state.
-    if (!searchValue) {
-      setFilteredCourses(courses);
-      return;
+        if (!searchValue) {
+            setFilteredCourses(courses);
+            return;
+        }
+        // Filter the courses by the search value.
+        setFilteredCourses(courses.filter(course => course.title.toLowerCase().includes(searchValue.toLowerCase())));
     }
-    // Filter the courses by the search value.
-    setFilteredCourses(courses.filter(course => course.title.toLowerCase().includes(searchValue.toLowerCase())));
-  }
 
-  return (
-    <div className="App">
-      <Layout>
-        <Layout.Header>
-          <Menu theme="dark" mode="horizontal" selectable={false}>
-            <Menu.Item key="1">
+    return (
+        <div className="App">
+            <Layout>
+                <Layout.Header>
+                    <Menu theme="dark" mode="horizontal" selectable={false}>
+                        <Menu.Item key="1">
               Swarthmore College Course Builder
-            </Menu.Item>
-          </Menu>
-        </Layout.Header>
-        <Layout.Content>
-          {error && <Alert message={error} type="error" />}
-          <CourseSearch placeholder="Begin typing to filter courses" enterButton="search" allowClear size="large" onSearch={handleSearch} />     
-          <CourseTable 
-            courses={filteredCourses} 
-            loading={fetching}
-          />
-        </Layout.Content>
-      </Layout>
-    </div>
-  );
+                        </Menu.Item>
+                    </Menu>
+                </Layout.Header>
+                <Layout.Content>
+                    {error && <Alert message={error} type="error" />}
+                    <CourseSearch placeholder="Begin typing to filter courses" enterButton="search" allowClear size="large" onSearch={handleSearch} />     
+                    <CourseTable 
+                        courses={filteredCourses} 
+                        loading={fetching}
+                    />
+                </Layout.Content>
+            </Layout>
+        </div>
+    );
 }
