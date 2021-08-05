@@ -29,9 +29,7 @@ export default function App() {
             <Layout>
                 <Layout.Header>
                     <Menu theme="dark" mode="horizontal" selectable={false}>
-                        <Menu.Item key="1">
-              Swarthmore College Course Builder
-                        </Menu.Item>
+                        <Menu.Item key="1">Course Search</Menu.Item>
                     </Menu>
                 </Layout.Header>
                 <Layout.Content>
