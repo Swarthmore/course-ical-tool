@@ -3,7 +3,7 @@
   "description": "Add your courses to your calendar",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://probable-telegram-0d38ea4e.pages.github.io/",
+  "homepage": "https://probable-telegram-0d38ea4e.pages.github.io",
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@testing-library/jest-dom": "^5.11.4",
