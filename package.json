@@ -1,5 +1,6 @@
 {
-  "name": "semester-course-builder",
+  "name": "course-search",
+  "description": "Add your courses to your calendar",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://swarthmore.github.io/course-search",
