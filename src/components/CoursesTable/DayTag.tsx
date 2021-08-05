@@ -18,7 +18,7 @@ export default function DayTag({day, ...rest}) {
         case 'SA':
             return 'geekblue';
         default:
-            return 'error';
+            return 'red';
         }
     };
 
