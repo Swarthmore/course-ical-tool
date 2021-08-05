@@ -50,7 +50,7 @@ export default function DownloadButton({course, ...rest}) {
     }
 
     return (
-        <Tooltip title="Download iCal for this course">
+        <Tooltip title="Download iCal for this course" placement="left">
             <Button 
                 type="primary" 
                 shape="circle" 
