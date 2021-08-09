@@ -27,8 +27,8 @@ export default function App() {
     return (
         <div className="App">
             <Layout>
-                <Layout.Header>
-                    <Menu theme="dark" mode="horizontal" selectable={false}>
+                <Layout.Header style={{padding:0}}>
+                    <Menu mode="horizontal" selectable={false} style={{backgroundColor: '#631919', color: '#ffffff', fontSize: '1.5rem', margin: '0.25rem 0'}}>
                         <Menu.Item key="1">Course Search</Menu.Item>
                     </Menu>
                 </Layout.Header>
