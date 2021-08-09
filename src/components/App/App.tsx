@@ -4,24 +4,34 @@ import useCourses from '../../hooks/useCourses';
 import CourseSearch from '../CourseSearch/CourseSearch';
 import CourseTable from '../CoursesTable/CourseTable';
 import {Course} from '../../types/course';
+import config from '../../config';
 
-const endpoint = 'https://secure.swarthmore.edu/trico-course-guide/courses.json';
+const {apiUrl, semester} = config;
 
 export default function App() {
 
     // Keep track of the selected rows.
     const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
 
-    const {courses, error, fetching} = useCourses(endpoint);
+    const {courses, error, fetching} = useCourses(apiUrl);
 
     const handleSearch = (searchValue) => {
     // If the search value is empty, reset the state.
         if (!searchValue) {
-            setFilteredCourses(courses);
+            setFilteredCourses(
+                courses
+                    .filter(course => course.semester === semester)
+                    .filter(course => Boolean(course.times))
+            );
             return;
         }
         // Filter the courses by the search value.
-        setFilteredCourses(courses.filter(course => course.title.toLowerCase().includes(searchValue.toLowerCase())));
+        setFilteredCourses(
+            courses
+                .filter(course => course.title.toLowerCase().includes(searchValue.toLowerCase()))
+                .filter(course => course.semester === semester)
+                .filter(course => Boolean(course.times))
+        );
     }
 
     return (
