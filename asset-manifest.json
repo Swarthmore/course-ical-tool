@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/course-ical-tool/static/js/main.71b52b2e.chunk.js",
-    "main.js.map": "/course-ical-tool/static/js/main.71b52b2e.chunk.js.map",
+    "main.js": "/course-ical-tool/static/js/main.2bf1fa99.chunk.js",
+    "main.js.map": "/course-ical-tool/static/js/main.2bf1fa99.chunk.js.map",
     "runtime-main.js": "/course-ical-tool/static/js/runtime-main.695ae2c5.js",
     "runtime-main.js.map": "/course-ical-tool/static/js/runtime-main.695ae2c5.js.map",
     "static/css/2.3804ad1f.chunk.css": "/course-ical-tool/static/css/2.3804ad1f.chunk.css",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.695ae2c5.js",
     "static/css/2.3804ad1f.chunk.css",
     "static/js/2.6795c085.chunk.js",
-    "static/js/main.71b52b2e.chunk.js"
+    "static/js/main.2bf1fa99.chunk.js"
   ]
 }
