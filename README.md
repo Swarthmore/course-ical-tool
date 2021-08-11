@@ -4,9 +4,11 @@ This project provides a searchable table of currently available courses. A calen
 
 This project is bootstraped with [create-react-app](https://facebook.github.io/create-react-app/docs/getting-started).
 
+[Click here to view the app](https://swarthmore.github.io/course-ical-tool/)
+
 ## Configuration
 
-* `apiUrl` and `semester` must be set in `src/config/ts`. 
+* `apiUrl`, `semester`, and `appName` must be set in `src/config/ts`. 
 * The API must provide an array of courses, as defined in `src/types/course.ts`. 
 * The semester string should follow the format `season_year`, IE. `fall_2021`, `spring_2020`, `summer_2022`, `winter_2000`, etc.
 
