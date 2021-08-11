@@ -1,9 +1,9 @@
 {
-  "name": "course-search",
-  "description": "Add your courses to your calendar",
+  "name": "course-ical-tool",
+  "description": "Search for your courses and download an ical file for each one",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://probable-telegram-0d38ea4e.pages.github.io",
+  "homepage": "https://swarthmore.github.io/course-ical-tool/",
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@craco/craco": "^6.2.0",
