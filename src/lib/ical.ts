@@ -10,6 +10,17 @@ moment().tz('America/New_York').format();
 moment.suppressDeprecationWarnings = true;
 
 /**
+ * Returns FIRST LAST name
+ * @param {*} str - The name in the format of LAST, FIRST
+ */
+const flipName = (str) => {
+    const split = str.split(',')
+    const first = split[1].trim()
+    const last = split[0].trim()
+    return `${first} ${last}`
+}
+
+/**
  * Returns the duration between $t1 and $t2
  * @param t1
  * @param t2
@@ -130,7 +141,7 @@ export function createICS(
             // get the first instructor from the course
             ...(instructors && {
                 organizer: {
-                    name: instructors[0].name,
+                    name: flipName(instructors[0].name),
                     email: instructors[0].email
                 }
             })

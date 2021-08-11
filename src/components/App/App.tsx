@@ -16,14 +16,13 @@ export default function App() {
     const {courses, error, fetching} = useCourses(apiUrl);
 
     const handleSearch = (searchValue) => {
-    // If the search value is empty, reset the state.
+        // If the search value is empty, reset the state.
         if (!searchValue) {
             setFilteredCourses(
                 courses
                     .filter(course => course.semester === semester)
                     .filter(course => Boolean(course.times))
             );
-            return;
         }
         // Filter the courses by the search value.
         setFilteredCourses(
@@ -45,10 +44,7 @@ export default function App() {
                 <Layout.Content>
                     {error && <Alert message={error} type="error" />}
                     <CourseSearch placeholder="Search for a course by name. Try: Introduction to" enterButton="search" allowClear size="large" onSearch={handleSearch} />     
-                    <CourseTable 
-                        courses={filteredCourses} 
-                        loading={fetching}
-                    />
+                    <CourseTable courses={filteredCourses} loading={fetching} />
                 </Layout.Content>
             </Layout>
         </div>
