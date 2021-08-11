@@ -44,7 +44,7 @@ export default function App() {
                 </Layout.Header>
                 <Layout.Content>
                     {error && <Alert message={error} type="error" />}
-                    <CourseSearch placeholder="Begin typing to filter courses" enterButton="search" allowClear size="large" onSearch={handleSearch} />     
+                    <CourseSearch placeholder="Search for a course by name. Try: Introduction to" enterButton="search" allowClear size="large" onSearch={handleSearch} />     
                     <CourseTable 
                         courses={filteredCourses} 
                         loading={fetching}
