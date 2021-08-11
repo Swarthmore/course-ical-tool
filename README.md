@@ -1,4 +1,4 @@
-# course-search
+# course-ical-tool
 
 This project provides a searchable table of currently available courses. A calendar file can be downloaded for each course.
 

@@ -6,7 +6,7 @@ import CourseTable from '../CoursesTable/CourseTable';
 import {Course} from '../../types/course';
 import config from '../../config';
 
-const {apiUrl, semester} = config;
+const {apiUrl, semester, appName} = config;
 
 export default function App() {
 
@@ -39,7 +39,7 @@ export default function App() {
             <Layout>
                 <Layout.Header style={{padding:0}}>
                     <Menu mode="horizontal" selectable={false} style={{backgroundColor: '#631919', color: '#ffffff', fontSize: '1.5rem', margin: '0.25rem 0'}}>
-                        <Menu.Item key="1">Course Search</Menu.Item>
+                        <Menu.Item key="1">{appName}</Menu.Item>
                     </Menu>
                 </Layout.Header>
                 <Layout.Content>
